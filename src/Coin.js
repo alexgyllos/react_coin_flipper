@@ -4,7 +4,7 @@ import './Coin.css'
 class Coin extends Component {
     render(){
         return (
-            <div className="Coin">
+            <div className={`Coin ${this.props.flipping && 'shaking'}`}>
                  <img src={this.props.info.imgSrc} alt={this.props.info.side}/>
             </div>
         )

@@ -1,0 +1,26 @@
+.CoinContainer {
+    /* display: flex; */
+    /* align-items: center; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* margin-top: auto;
+    margin-bottom: auto; */
+    padding-top: 20vh;
+}
+
+.CoinContainer button {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    color: white;
+    font-size: 1.8em;
+    font-weight: bold;
+    background-color: khaki;
+    cursor: pointer;
+    outline-style: double;
+    transition: 0.2s;
+}
+
+.CoinContainer button:hover {
+    background-color: navajowhite;
+}

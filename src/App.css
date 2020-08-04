@@ -1,5 +1,17 @@
+html {
+  /* background-image: url('./background.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat; */
+  background-color: lightcoral;
+  color: white;
+}
+
 .App {
   text-align: center;
+  /* display: flex; */
+  /* justify-content: center; */
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .App-logo {

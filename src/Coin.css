@@ -1,4 +1,74 @@
 .Coin img {
     width: 200px;
     height: 200px; 
+    border-radius: 50%;
+    background-color: black;
+    border: 2px solid black;
+}
+
+.shaking {
+    animation-name: wobble;
+    animation-duration: 2s;
+}
+
+@keyframes wobble {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    5% {
+        transform: rotateX(-180deg);       
+    }
+
+    10% {
+        transform: rotateX(0deg);
+    }
+
+    15% {
+        transform: rotateX(-180deg); 
+    }
+
+    20% {
+        transform: rotateX(0deg);
+    }
+
+    25% {
+        transform: rotateX(-180deg);
+    }
+
+    30% {
+        transform: rotateX(0deg);
+    }
+
+    35% {
+        transform: rotateX(-180deg);
+    }
+
+    40% {
+        transform: rotateX(0deg);
+    }
+
+    50% {
+        transform: rotateX(-180deg);
+    }
+
+    65% {
+        transform: rotateX(0deg);
+    }
+
+    80% {
+        transform: rotateX(-180deg);
+    }
+
+    90% {
+        transform: rotateX(0deg);
+    }
+
+    100% {
+        transform: rotateX(-1800deg);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {choice} from './helpers'
 import Coin from './Coin'
+import './CoinContainer.css'
 
 class CoinContainer extends Component {
     static defaultProps = {
@@ -16,7 +17,8 @@ class CoinContainer extends Component {
             currCoin: null,
             nFlips: 0,
             nHeads: 0,
-            nTails: 0
+            nTails: 0,
+            flipping: false
         }; 
         this.handleClick = this.handleClick.bind(this);
     }
@@ -28,9 +30,15 @@ class CoinContainer extends Component {
                currCoin: newCoin,
                nFlips: st.nFlips + 1,
                nHeads: st.nHeads + (newCoin.side === "heads" ? 1 : 0),
-               nTails: st.nTails + (newCoin.side === "tails" ? 1 : 0)
+               nTails: st.nTails + (newCoin.side === "tails" ? 1 : 0),
+               flipping: true
             };
         });
+        setTimeout(() => {
+            this.setState({
+                flipping: false
+            })
+        }, 2000)
     }
 
     handleClick(e) {
@@ -40,10 +48,10 @@ class CoinContainer extends Component {
     render() {
         return(
           <div className="CoinContainer" >
-              <h2>Let's flip a coin.</h2>
-              {this.state.currCoin && <Coin info={this.state.currCoin}/>}
-              <button onClick={this.handleClick}>Flip the coin.</button>
-              <p>Out of {this.state.nFlips} flips, there have been {this.state.nHeads} heads and {this.state.nTails} tails.</p>
+              {/* <h1>Let's flip a coin.</h1> */}
+              {this.state.currCoin && <Coin info={this.state.currCoin} flipping={this.state.flipping}/>}
+              <button onClick={this.handleClick}>Let's flip a coin.</button>
+              <h2>Out of {this.state.nFlips} flips, there have been {this.state.nHeads} heads and {this.state.nTails} tails.</h2>
           </div>  
         )
     }
